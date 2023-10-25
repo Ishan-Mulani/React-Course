@@ -2,12 +2,15 @@ class Hello extends React.Component {
   render() {
     console.log(this.props);
     const props = this.props;
-    // props cannot be change they are immutable
-    // we cannot add update props
+    const bangs = "!".repeat(this.props.bangs);
     return (
-      <h1>
-        Hello from {props.from} to {props.to}
-      </h1>
+      <div>
+        <h1>
+          Hello from {props.from} to {props.to}
+          {bangs}
+        </h1>
+        <img src={props.img} />
+      </div>
     );
   }
 }
